@@ -1,0 +1,1041 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+    -ms-text-size-adjust: none;
+    /*Ie*/
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body {
+    background-color: #1B1B1B;
+    /* 배경 기본색 */
+    font-family: 'Pretendard', sans-serif;
+    margin: 0 auto;
+    /* 중앙 정렬 (화면이 클 경우) */
+    color: #ffffff;
+}
+
+@font-face {
+    font-family: 'PyeongchangPeace';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+
+#wrap {
+    min-width: 1360px;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+    /* 모바일 등에서 화면 끝에 붙지 않도록 기본 패딩 추가 */
+}
+
+/* 공통 섹션 타이틀 */
+.section-title {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+}
+
+/* --- 유틸리티 클래스 --- */
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* --- 1. 헤더 (Header) --- */
+header {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(27, 27, 27, 0.5);
+    position: fixed;
+}
+
+.header-inner {
+    width: 1320px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 50px;
+}
+
+.header-nav a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.header-nav a:hover {
+    color: #6DCCDD;
+}
+
+.header-utils {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-header {
+    padding: 8px 20px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #000000;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-header:hover {
+    color: #6DCCDD;
+    border-color: #6DCCDD;
+}
+
+/* --- 2. 메인 배너 (Main Banner) --- */
+.main-banner {
+    width: 100%;
+    height: 670px;
+    margin: 85px auto 0;
+    position: relative;
+
+}
+
+.main-banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.black-wave-top {
+    width: 100%;
+    position: absolute;
+    bottom: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.black-wave-top img {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+}
+
+.banner-text {
+    position: absolute;
+    /* 배너 이미지 위에 겹치기 위해 절대위치 사용 */
+    top: 40%;
+    /* 위에서부터의 위치 (시안에 맞춰 조절하세요) */
+    left: 50%;
+    /* 좌우 중앙 정렬을 위한 기준점 */
+    transform: translate(-50%, -50%);
+    /* 정확한 정중앙 배치를 위한 보정 */
+    text-align: center;
+    /* 텍스트 가운데 정렬 */
+    z-index: 20;
+    /* 배경 이미지보다 위에 오도록 설정 */
+    color: #ffffff;
+    /* 글자색 흰색 */
+}
+
+.banner-text h2 {
+    font-weight: 500;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: 'PyeongchangPeace';
+}
+
+.banner-text .bar {
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0 auto 20px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* --- 3. 사이드 고정 버튼 --- */
+.side-button {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    background-color: rgba(91, 219, 243, 0.7);
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+
+.side-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.side-item:hover {
+    transform: scale(1.1);
+}
+
+.side-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: -20px center;
+    font-size: 10px;
+}
+
+.side-text {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* =========================================
+           4. INTRO SECTION (대칭형 아치)
+           ========================================= */
+.intro-section {
+    position: relative;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+.inner-1320 {
+    width: 1320px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* 💡 수정된 부분: 아치형 배치에 맞게 전체 높이를 좀 더 타이트하게 450px로 축소했습니다. */
+.intro-visual {
+    position: relative;
+    width: 100%;
+    height: 630px;
+    margin: 0 auto;
+}
+
+/* 💡 수정된 부분: 로고 크기를 줄이고(550px), 바닥(top: 160px)에 위치하도록 수정했습니다. */
+.logo-area {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    /* 로고 그래픽이 위치할 위쪽 여백 */
+    transform: translateX(-50%);
+    width: 550px;
+    /* 기존 650px에서 너무 크지 않게 축소 */
+    height: auto;
+    z-index: 1;
+    /* 물방울 뒤나 자연스럽게 겹치도록 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-area img {
+    width: 100%;
+    height: auto;
+}
+
+/* 💡 수정된 부분: 기준점을 확실하게 중앙(left: 50%)으로 잡았습니다. */
+.droplet {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    cursor: pointer;
+    /* transition: transform 0.3s ease; */
+    z-index: 5;
+    /* 로고와 자연스럽게 어우러지도록 설정 */
+    background-color: #000;
+}
+
+/* 물방울 내부 이미지 */
+.droplet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.droplet:hover img {
+    transform: scale(1.1);
+}
+
+/* 물 차오르는 효과 */
+.droplet::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #6dccdd, rgba(64, 163, 180, 0.6));
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    mix-blend-mode: overlay;
+    border-radius: 50%;
+}
+
+.droplet:hover::after {
+    transform: translateY(0%);
+}
+
+.droplet-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 14px;
+    opacity: 0;
+    z-index: 10;
+    transition: opacity 0.4s ease 0.2s;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.droplet:hover .droplet-text {
+    opacity: 1;
+}
+
+
+/* 1. 중앙 최상단 (Drop 3) */
+.drop3 {
+    width: 192px;
+    height: 177px;
+    top: 60px;
+    right: 540px;
+    z-index: 6;
+}
+
+/* 2. 중간 왼쪽 (Drop 2) */
+.drop2 {
+    width: 176px;
+    height: 164px;
+    left: 300px;
+    top: 200px;
+}
+
+/* 3. 중간 오른쪽 (Drop 4) */
+.drop4 {
+    width: 130px;
+    height: 130px;
+    top: 250px;
+    right: 270px;
+}
+
+/* 4. 가장 왼쪽 (Drop 1) */
+.drop1 {
+    width: 225px;
+    height: 216px;
+    top: 420px;
+    left: 60px;
+}
+
+/* 5. 가장 오른쪽 (Drop 5) */
+.drop5 {
+    width: 196px;
+    height: 187px;
+    top: 450px;
+    right: 100px;
+}
+
+
+/* --- 5. 흐르는 텍스트 (Marquee) --- */
+.marquee-section {
+    width: 100%;
+    background-color: transparent;
+    padding: 50px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+}
+
+.marquee-text {
+    font-family: 'PyeongchangPeace';
+    font-size: 50px;
+    color: #6DCCDD;
+    white-space: nowrap;
+    padding-right: 50px;
+    font-weight: 300;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-section:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* ==================== 
+           [섹션 1] 로고 파트 
+           ==================== */
+.logo-section {
+    padding: 100px 0;
+}
+
+.logo-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+/* 실제 이미지를 넣을 때 사용하는 클래스 */
+.logo-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.logo-text-wrap {
+    font-weight: 300;
+    width: 50%;
+    text-align: center;
+    line-height: 1.8;
+    color: #fff;
+    font-size: 16px;
+}
+
+.logo-text-wrap p {
+    margin-bottom: 20px;
+}
+
+/* ==================== 
+           [섹션 2] 배너 파트 
+           ==================== */
+.banner-section {
+    /* 지정해주신 색상: 위 #6DCCDD, 아래 #3B6E77 */
+    background: linear-gradient(to bottom, #6DCCDD, #3B6E77);
+    /* 지정해주신 높이 275px */
+    height: 260px;
+    display: flex;
+    align-items: center;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner-left {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner-right {
+    width: 50%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* 티켓 목업 이미지 임시 박스 */
+.ticket-mockup {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    font-size: 14px;
+    transform: rotate(-6deg);
+    transition: transform 0.5s ease;
+}
+
+.ticket-mockup img {
+    width: 400px;
+    margin-left: 200px;
+}
+
+/* 호버 시 기울기 원래대로 */
+.ticket-mockup:hover {
+    transform: rotate(0deg);
+}
+
+.banner-title {
+    font-family: 'PyeongchangPeace';
+    font-size: 30px;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.banner-desc {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 300;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.btn-ticket {
+    display: inline-block;
+    padding: 10px 40px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* 버튼 호버 시 색상 반전 (글씨는 #3B6E77) */
+.btn-ticket:hover {
+    background-color: #ffffff;
+    color: #3B6E77;
+}
+
+/* ==================== 
+           [섹션 3] 브랜드 밸류 
+           ==================== */
+.values-section {
+    padding: 120px 0 60px 0;
+}
+
+.values-grid {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* 1320px 안에서 균등 배치 */
+    gap: 20px;
+    /* 아이템 사이 간격 추가 */
+}
+
+.value-item {
+    flex: 1;
+    /* 부족한 공간 안에서 비율에 맞게 크기를 조절함 */
+    max-width: 400px;
+    /* 최대 크기는 요청하신 426px로 제한 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    /* 🌟핵심: 가로세로 비율을 1:1로 강제하여 절대 타원형이 되지 않음 */
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    /* 이미지 로드 전 배경색 */
+    cursor: pointer;
+}
+
+.circle-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s ease;
+}
+
+/* 호버 시 이미지 살짝 확대 */
+.circle-wrap:hover .circle-bg {
+    transform: scale(1.1);
+}
+
+/* 호버 시 나타나는 검정띠 & 흰글자 */
+.circle-overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+
+.circle-wrap:hover .circle-overlay {
+    opacity: 1;
+}
+
+.circle-overlay span {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+}
+
+.value-desc {
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.7em;
+    padding: 0 20px;
+}
+
+/* ==================== 
+           [섹션 4] 아워 히스토리 (OUR HISTORY) 
+           ==================== */
+.history-section {
+    padding: 60px 0 120px 0;
+    overflow: hidden;
+    /* 가로 스크롤 방지 */
+}
+
+.timeline-container {
+    position: relative;
+    margin-top: 60px;
+}
+
+/* 메인 그라디언트 선 */
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #3B6E78, #6DCCDE);
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-items {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    height: 350px;
+    /* 지그재그 배치를 위한 위아래 전체 공간 확보 */
+}
+
+.timeline-item {
+    flex: 1;
+    /* 1320px 안에서 균등하게 너비 분할 */
+    position: relative;
+    height: 100%;
+}
+
+/* 메인 선 위 연결점(Dot) */
+.timeline-dot {
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    /* 시작점 여백 */
+    width: 12px;
+    height: 12px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 rgba(109, 204, 222, 0);
+    transition: all 0.3s ease;
+}
+
+/* [추천 애니메이션] 호버 시 도트 물결(Pulse) 효과 */
+@keyframes pulse-dot {
+    0% {
+        box-shadow: 0 0 0 0 rgba(109, 204, 222, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(109, 204, 222, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(109, 204, 222, 0);
+    }
+}
+
+.timeline-item:hover .timeline-dot {
+    animation: pulse-dot 1.5s infinite;
+    background-color: #6DCCDE;
+}
+
+/* 도트와 이미지를 잇는 얇은 수직 연결선 */
+.timeline-connector {
+    position: absolute;
+    left: 40px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-50%);
+    transition: background 0.3s ease;
+}
+
+.item-top .timeline-connector {
+    bottom: 50%;
+    height: 50px;
+}
+
+.item-bottom .timeline-connector {
+    top: 50%;
+    height: 50px;
+}
+
+.timeline-item:hover .timeline-connector {
+    background: #6DCCDE;
+}
+
+/* 컨텐츠 그룹 (이미지 + 텍스트) */
+.history-content {
+    position: absolute;
+    left: 40px;
+    /* 원형 이미지 중심(40px)과 수직선 위치를 완벽히 맞추기 위한 이동 */
+    transform: translateX(-40px);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 260px;
+    /* 텍스트가 줄바꿈 되도록 너비 할당 */
+    cursor: pointer;
+}
+
+.item-top .history-content {
+    bottom: calc(50% + 50px);
+    /* 메인선 위로 띄움 */
+}
+
+.item-bottom .history-content {
+    top: calc(50% + 50px);
+    /* 메인선 아래로 내림 */
+}
+
+/* 원형 이미지 랩퍼 */
+.history-img-wrap {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+    transition: all 0.4s ease;
+}
+
+.history-bg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+/* 원형 이미지 호버 확대 모션 */
+.timeline-item:hover .history-bg {
+    transform: scale(1.15);
+}
+
+.timeline-item:hover .history-img-wrap {
+    border-color: #6DCCDE;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* 텍스트 컨테이너 */
+.history-text {
+    flex: 1;
+}
+
+.history-text .year {
+    display: block;
+    font-size: 22px;
+    font-weight: 500;
+    color: #85bcc7;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.history-text p {
+    font-size: 13px;
+    color: #fff;
+    line-height: 1.4;
+    font-weight: 200;
+    margin: 0;
+    word-break: keep-all;
+    /* 한글 줄바꿈 최적화 */
+}
+
+.timeline-item:hover .history-text .year {
+    color: #5de7ff;
+    /* 호버 시 연도 텍스트 밝게 전환 */
+}
+
+/* =========================================
+           2. 브랜드 로고 띠 (Ticker) 섹션
+           ========================================= */
+.brand-ticker-wrapper {
+    width: 100%;
+    background-color: #fff;
+    /* 로고 배경색 (흰색) */
+    padding: 10px 0;
+    overflow: hidden;
+    /* 넘치는 부분 숨김 */
+    display: flex;
+}
+
+/* 애니메이션 트랙 */
+.ticker-track {
+    display: flex;
+    align-items: center;
+    /* 무한 롤링 애니메이션 정의 */
+    animation: scroll-left 20s linear infinite;
+}
+
+/* 개별 로고 이미지 스타일 */
+.ticker-item {
+    /* [로고 이미지 크기 조절] */
+    height: 40px;
+    margin: 0 40px;
+    /* 로고 사이 간격 */
+    flex-shrink: 0;
+}
+
+.ticker-item img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+/* 띠가 왼쪽으로 흐르는 키프레임 */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* 트랙 길이의 절반만큼 이동 후 리셋 */
+}
+
+/* =========================================
+           3. 푸터 섹션 (배경 #111111)
+           ========================================= */
+.footer {
+    background-color: #111111;
+    color: #fff;
+    padding: 60px 100px;
+    /* 내부 여백 */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 350px;
+    /* 넉넉한 높이 */
+}
+
+/* --- 푸터 왼쪽 --- */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 60%;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* 오션플로우 로고 (왼쪽) */
+.footer-logo-img {
+    /* [이미지 변경] 오션플로우 로고 파일 */
+    width: 300px;
+    /* 적절히 조절 */
+    display: block;
+}
+
+.footer-info {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #eee;
+}
+
+.info-block {
+    margin-bottom: 20px;
+}
+
+.info-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* --- 푸터 오른쪽 --- */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* 오른쪽 정렬 */
+    gap: 30px;
+    position: relative;
+}
+
+/* [원형 텍스트 + 로고 컨테이너] */
+.circle-logo-container {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 중앙 로고 이미지 (회전 안함) */
+.center-logo {
+    position: absolute;
+    width: 100px;
+    /* 중앙 로고 크기 */
+    height: auto;
+    z-index: 2;
+}
+
+/* 회전하는 텍스트 SVG */
+.rotating-text-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate-circle 15s linear infinite;
+    /* 회전 애니메이션 */
+}
+
+/* 텍스트 패스 폰트 설정 */
+.rotating-text-svg text {
+    font-family: 'PyeongchangPeace';
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* 텍스트 색상 클래스 */
+.text-ocean {
+    fill: #6DCCDD;
+}
+
+.text-busan {
+    fill: #ffffff;
+}
+
+@keyframes rotate-circle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* SNS 아이콘 영역 */
+.sns-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sns-icon-btn {
+    width: 40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sns-icon-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sns-icon-btn:hover {
+    color: #6DCCDD;
+
+}

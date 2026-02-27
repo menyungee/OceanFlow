@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1360">
+    <!-- 브라우저 뷰포트 너비를 1360px로 고정하여 페이지를 그리도록 설정 -->
+    <title>EXHIBITION</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- webfont -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style_sub3.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="wrapper">
+
+              <!-- 1. HEADER -->
+            <header>
+                <div class="header-inner">
+                    <!-- OCEAN FLOW 로고 영역 -->
+                    <div class="header-logo">
+                        <!-- 여기에 로고 이미지 태그를 넣으세요 <img src="logo.png"> -->
+                        <a href="index.html">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <nav class="header-nav">
+                        <a href="sub1.html">ABOUT US</a>
+                        <a href="sub2.html">SHOWS</a>
+                        <a href="sub3.html">EXHIBITION</a>
+                        <a href="sub4.html">TICKET&MERCH</a>
+                    </nav>
+
+                    <div class="header-utils">
+                        <button class="btn-header">LOGIN</button>
+                        <button class="btn-header">TICKET</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 2. MAIN BANNER -->
+            <section class="main-banner">
+                <div class="black-wave-top">
+                    <img src="./images/wave black.svg" alt="wave_black">
+                </div>
+                <img src="./images/sub3/mainbanner_sub3.png" alt="main-banner">
+                <div class="banner-text">
+                    <h2>EXHIBITION</h2>
+                    <div class="bar"></div>
+                    <p>바다의 흐름에서 영감을 받은 오션플로우 브랜드 전시 공간</p>
+                </div>
+            </section>
+
+            <!-- 3. SIDE BUTTON (FIXED) -->
+            <aside class="side-button">
+                <div class="side-item">
+                    <div class="side-icon">
+                        <img src="./images/date.svg" alt="">
+                    </div>
+                    <span class="side-text">일정보기</span>
+                </div>
+                <div class="side-item">
+                    <div class="side-icon">
+                        <img src="./images/ticket.svg" alt="">
+                    </div>
+                    <span class="side-text">TICKET</span>
+                </div>
+                <div class="side-item">
+                    <div class="side-icon">
+                        <img src="./images/connet.svg" alt="">
+                    </div>
+                    <span class="side-text">CONNECT</span>
+                </div>
+            </aside>
+
+            <!-- 4. EXHIBITION SECTION -->
+            <!-- 요구사항: 포스터 3개 공간 확보 / 왼쪽에서 순서대로 나오게(aos) / 화려한 애니메이션 추가 -->
+            <section class="exhibition-sec">
+                <div class="container">
+                    <h3 class="section-title" data-aos="fade-right">EXHIBITION</h3>
+
+                    <div class="exhibition-grid">
+                        <!-- 첫번째 포스터 -->
+                        <!-- 가지고 계신 png 파일을 img src 속성에 넣으시면 됩니다 -->
+                        <div class="poster-card" data-aos="fade-right" data-aos-delay="0">
+                            <img src="./images/sub3/ep1.png" alt="poster 1">
+                        </div>
+
+                        <!-- 두번째 포스터 -->
+                        <div class="poster-card" data-aos="fade-right" data-aos-delay="200">
+                            <img src="./images/sub3/ep2.png" alt="poster 2">
+                        </div>
+
+                        <!-- 세번째 포스터 -->
+                        <div class="poster-card" data-aos="fade-right" data-aos-delay="400">
+                            <img src="./images/sub3/ep3.png" alt="poster 3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. CONFERENCE SECTION -->
+            <!-- 요구사항: 포스터 공간 확보 / 포스터는 왼쪽, 글은 오른쪽에서 서서히 나오게 / 버튼 호버 색변경 -->
+            <section class="conference-sec">
+                <div class="container">
+                    <h3 class="section-title">CONFERENCE</h3>
+
+                    <!-- 컨퍼런스 1 (포스터 왼쪽, 설명 오른쪽) -->
+                    <div class="conf-item">
+                        <div class="conf-poster" data-aos="fade-right" data-aos-duration="1000">
+                            <img src="./images/sub3/cp1.png" alt="Future Flow 포스터">
+                        </div>
+                        <div class="conf-info" data-aos="fade-left" data-aos-duration="1000">
+                            <h4 class="conf-title">Future Flow : <span class="highlight">패션과 지속 가능성 새로운 방향</span></h4>
+                            <p class="conf-desc">
+                                지속가능한 소재와 환경 친화적 시스템을 중심으로<br>
+                                미래 패션 산업이 나아갈 방향을 모색하는 자리입니다.<br><br>
+                                전문가들의 강연과 토론을 통해, 패션 산업이 직면한 과제와<br>
+                                새로운 기회를 공유하고 혁신적인 아이디어를 나눕니다.
+                            </p>
+                            <button class="btn-apply">신청하기</button>
+                        </div>
+                    </div>
+
+                    <!-- 컨퍼런스 2 (설명 왼쪽, 포스터 오른쪽 - CSS nth-child로 자동 뒤집힘) -->
+                    <div class="conf-item">
+                        <div class="conf-poster" data-aos="fade-left" data-aos-duration="1000">
+                            <img src="./images/sub3/cp2.png" alt="Global Wave 포스터">
+                        </div>
+                        <div class="conf-info" data-aos="fade-right" data-aos-duration="1000">
+                            <h4 class="conf-title">Global Wave : <span class="highlight">아시아 패션의 새로운 흐름</span></h4>
+                            <p class="conf-desc">
+                                아시아를 중심으로 글로벌 시장에서 주목받고 있는<br>
+                                트렌드와 디자이너들을 소개합니다.<br><br>
+                                아시아 패션의 독창적인 디자인과 문화적 가치를 바탕으로<br>
+                                세계 무대에서 어떻게 성장하고 있는지 살펴봅니다.
+                            </p>
+                            <button class="btn-apply">신청하기</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 6. FLOWING TEXT (흐르는 문구 공간) -->
+            <div class="marquee-section">
+                <div class="marquee-content">
+                    <span class="marquee-text">YOUR FLOW ! CATCH YOUR FLOW ! CATCH YOUR FLOW ! YOUR FLOW ! CATCH YOUR
+                        FLOW ! CATCH YOUR FLOW ! &nbsp;</span>
+                    <span class="marquee-text">YOUR FLOW ! CATCH YOUR FLOW ! CATCH YOUR FLOW ! YOUR FLOW ! CATCH YOUR
+                        FLOW ! CATCH YOUR FLOW ! &nbsp;</span>
+                </div>
+            </div>
+
+            <!-- 7. TIME TABLE SECTION -->
+            <!-- 요구사항: 월~일 / 11시~19시 / 호버 시 색이 차오르는 회색 버튼 / 색 변경 가능 주석 -->
+            <section class="timetable-sec">
+                <div class="container">
+                    <h3 class="section-title">TIME TABLE</h3>
+
+                    <div class="tt-wrapper" data-aos="fade-up" data-aos-duration="1200">
+                        <!-- 시간 축 -->
+                        <div class="tt-times">
+                            <span>11:00</span>
+                            <span>12:00</span>
+                            <span>13:00</span>
+                            <span>14:00</span>
+                            <span>15:00</span>
+                            <span>16:00</span>
+                            <span>17:00</span>
+                            <span>18:00</span>
+                            <span>19:00</span>
+                        </div>
+
+                        <!-- 메인 그리드 및 스케줄 -->
+                        <div class="tt-grid">
+                            <!-- 배경 가로선 -->
+                            <div class="tt-lines">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+
+                            <!-- 각 요일별 데이터 (스타일의 top, height 속성으로 위치 조정) -->
+                            <!-- 전체 시간(8시간) 기준 1시간 = 12.5% 비율 -->
+
+                            <div class="tt-col">
+                                <div class="tt-day">MON</div>
+                                <!-- 12:00 ~ 15:00 (1칸 아래에서 시작, 3칸 크기) -->
+                                <!-- 🎨 색상 변경: style 속성의 --fill-color 값을 원하는 색상 코드로 바꾸세요! -->
+                                <div class="sch-block" style="top: calc(50px + 12.5%); height: 37.5%;">
+                                    <div class="sch-fill" style="--fill-color: #8ECEA6;"></div>
+                                    <span class="sch-text">PROGRAM<br>INFO</span>
+                                </div>
+                            </div>
+
+                            <div class="tt-col">
+                                <div class="tt-day">TUE</div>
+                                <!-- 13:00 ~ 16:00 -->
+                                <div class="sch-block" style="top: calc(50px + 25%); height: 37.5%;">
+                                    <div class="sch-fill" style="--fill-color: #A3C952;"></div>
+                                    <span class="sch-text">PROGRAM<br>INFO</span>
+                                </div>
+                            </div>
+
+                            <div class="tt-col">
+                                <div class="tt-day">WED</div>
+                                <!-- 11:00 ~ 14:00 -->
+                                <div class="sch-block" style="top: calc(50px + 0%); height: 37.5%;">
+                                    <div class="sch-fill" style="--fill-color: #6DCCDD;"></div>
+                                    <span class="sch-text">PROGRAM<br>INFO</span>
+                                </div>
+                            </div>
+
+                            <div class="tt-col">
+                                <div class="tt-day">THU</div>
+                                <!-- 14:00 ~ 17:00 -->
+                                <div class="sch-block" style="top: calc(50px + 37.5%); height: 37.5%;">
+                                    <div class="sch-fill" style="--fill-color: #EAF375;"></div>
+                                    <span class="sch-text">PROGRAM<br>INFO</span>
+                                </div>
+                            </div>
+
+                            <div class="tt-col">
+                                <div class="tt-day">FRI</div>
+                                <!-- 14:00 ~ 17:00 -->
+                                <div class="sch-block" style="top: calc(50px + 37.5%); height: 37.5%;">
+                                    <div class="sch-fill" style="--fill-color: #FF9EC8;"></div>
+                                    <span class="sch-text">PROGRAM<br>INFO</span>
+                                </div>
+                            </div>
+
+                            <div class="tt-col">
+                                <div class="tt-day">SAT</div>
+                                <!-- 12:00 ~ 15:00 -->
+                                <div class="sch-block" style="top: calc(50px + 12.5%); height: 37.5%;">
+                                    <div class="sch-fill" style="--fill-color: #F6B26B;"></div>
+                                    <span class="sch-text">PROGRAM<br>INFO</span>
+                                </div>
+                            </div>
+
+                            <div class="tt-col">
+                                <div class="tt-day">SUN</div>
+                                <!-- 16:00 ~ 19:00 -->
+                                <div class="sch-block" style="top: calc(50px + 62.5%); height: 30%;">
+                                    <div class="sch-fill" style="--fill-color: #6DDD8F;"></div>
+                                    <span class="sch-text">PROGRAM<br>INFO</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. 브랜드 로고 띠 (Ticker) 영역 -->
+            <div class="brand-ticker-wrapper">
+                <!-- 
+               [중요] 무한 스크롤이 끊기지 않게 하려면 로고들을 충분히 복사해서 넣어줘야 합니다.
+               아래 ticker-item들을 복사해서 두 배로 늘려주세요.
+            -->
+                <div class="ticker-track">
+                    <!-- 로고 그룹 1 -->
+                    <div class="ticker-item"><img src="./images/busan_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/biz_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/sumu_logo.png" alt="Logo"></div>
+
+                    <!-- 로고 그룹 2 (자연스러운 연결을 위해 같은 이미지 반복) -->
+                    <div class="ticker-item"><img src="./images/busan_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/biz_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/sumu_logo.png" alt="Logo"></div>
+
+
+                    <!-- 로고 그룹 3 (화면 너비 1920px를 채우기 위해 충분히 반복) -->
+                    <div class="ticker-item"><img src="./images/busan_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/biz_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/sumu_logo.png" alt="Logo"></div>
+
+                </div>
+            </div>
+
+            <!-- 8. 푸터 영역 -->
+            <footer class="footer">
+                <!-- 왼쪽: 정보 및 링크 -->
+                <div class="footer-left">
+                    <div class="footer-links">
+                        <a href="#">중요정보고시</a>
+                        <a href="#">서비스이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">이메일무단수집거부</a>
+                        <a href="#">고객센터</a>
+                    </div>
+
+                    <!-- 오션플로우 텍스트 로고 (이미지 교체 필요) -->
+                    <div class="footer-logo">
+                        <!-- [이미지 변경] 여기에 가지고 계신 오션플로우 로고 파일을 넣으세요 -->
+                        <img src="./images/footer_logo_text.png" alt="Ocean Flow" class="footer-logo-img">
+                    </div>
+
+                    <div class="footer-info">
+                        <div class="info-block">
+                            <span class="info-title">주소</span>
+                            BEXCO, Busan 55 APEC-ro, Haeundae-gu, Busan, Republic of Korea
+                        </div>
+                        <div class="info-block">
+                            <span class="info-title">행사일정</span>
+                            December 18 - December 27, 2026<br>
+                            11:00 AM - 7:00 PM
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 오른쪽: 원형 로고 및 SNS -->
+                <div class="footer-right">
+
+                    <!-- 원형 로고 컨테이너 -->
+                    <div class="circle-logo-container">
+                        <!-- 
+                        1. 둥근 텍스트 (SVG)
+                        - OCEAN FLOW: #6DCCDE
+                        - BUSAN FASHION WEEK: #ffffff
+                        - 폰트: PyeongchangPeace
+                        - 애니메이션: 회전
+                    -->
+                        <svg class="rotating-text-svg" viewBox="0 0 300 300">
+                            <defs>
+                                <!-- 텍스트가 따라갈 원형 경로 정의 -->
+                                <path id="circlePath"
+                                    d="M 150, 150 m -120, 0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0 " />
+                            </defs>
+                            <text>
+                                <!-- 
+                                startOffset 값을 조절하여 텍스트 위치를 잡습니다.
+                                글자 수에 따라 %를 조금씩 수정해야 할 수 있습니다.
+                            -->
+                                <textPath href="#circlePath" startOffset="0%">
+                                    <tspan class="text-ocean" dx="15">OCEAN FLOW</tspan>
+                                    <tspan class="text-busan" dx="50">BUSAN FASHION WEEK</tspan>
+                                    <tspan class="text-ocean" dx="50">OCEAN FLOW</tspan> <!-- 반복해서 원을 채움 -->
+                                </textPath>
+                            </text>
+                        </svg>
+
+                        <!-- 2. 중앙 고정 로고 (이미지 교체 필요) -->
+                        <!-- [이미지 변경] 원형 안에 들어갈 로고 파일을 넣으세요 -->
+                        <img src="./images/footer_logo_img.png" alt="Center Logo" class="center-logo">
+                    </div>
+
+                    <div class="sns-icons">
+                        <!-- [링크 수정] 아래 href="" 따옴표 안에 인스타그램 주소를 입력하세요 -->
+                        <a href="https://www.instagram.com/" target="_blank" class="sns-icon-btn">
+                            <img src="./images/insta.png" alt="Instagram">
+                        </a>
+
+                        <!-- [링크 수정] 아래 href="" 따옴표 안에 유튜브 채널 주소를 입력하세요 -->
+                        <a href="https://www.youtube.com/?hl=ko&gl=KR&app=desktop" target="_blank" class="sns-icon-btn">
+                            <img src="./images/youtube.png" alt="Youtube">
+                        </a>
+
+                        <!-- [링크 수정] 아래 href="" 따옴표 안에 X(트위터) 주소를 입력하세요 -->
+                        <a href="https://x.com/?lang=ko" target="_blank" class="sns-icon-btn">
+                            <img src="./images/x_sns.png" alt="X">
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <!-- AOS JS 라이브러리 로드 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS 초기화 스크립트 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // AOS 초기화
+            AOS.init({
+                // 한 번만 애니메이션 실행할지 여부 (true: 스크롤 올렸다 내리면 다시 실행 안 함)
+                once: false,
+                // 애니메이션 지속 시간 (ms)
+                duration: 1000,
+                // 오프셋 (트리거 지점)
+                offset: 120,
+            });
+        });
+
+        AOS.init({
+            once: false,
+            offset: 100,
+            duration: 800,
+            easing: 'ease-in-out',
+        });
+    </script>
+</body>

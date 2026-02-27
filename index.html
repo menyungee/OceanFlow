@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1360">
+    <!-- 브라우저 뷰포트 너비를 1360px로 고정하여 페이지를 그리도록 설정 -->
+    <title>OCEAN FLOW</title>
+    <!-- favicon -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <!-- webfont -->
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="wrapper">
+            <!-- 1. HEADER -->
+            <header>
+                <div class="header-inner">
+                    <!-- OCEAN FLOW 로고 영역 -->
+                    <div class="header-logo">
+                        <!-- 여기에 로고 이미지 태그를 넣으세요 <img src="logo.png"> -->
+                        <a href="index.html">
+                            <img src="./images/logo.png" alt="">
+                        </a>
+                    </div>
+
+                    <nav class="header-nav">
+                        <a href="sub1.html">ABOUT US</a>
+                        <a href="sub2.html">SHOWS</a>
+                        <a href="sub3.html">EXHIBITION</a>
+                        <a href="sub4.html">TICKET&MERCH</a>
+                    </nav>
+
+                    <div class="header-utils">
+                        <button class="btn-header">LOGIN</button>
+                        <button class="btn-header">TICKET</button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- 2. MAIN BANNER -->
+            <section class="main-banner">
+                <!-- 검정 물결 (백그라운드 요소) -->
+                <div class="black-wave-top">
+                    <!-- 이미지 태그나 CSS 배경으로 넣으세요 -->
+                    <img src="./images/wave black.svg" alt="wave_black">
+                </div>
+                <!-- [사진 넣을 공간] 여기에 img 태그를 넣거나, css 배경이미지로 처리하세요 -->
+                <img src="./images/mainbanner.png" alt="main-banner">
+            </section>
+
+            <!-- 3. INTRODUCE SECTION -->
+            <section class="intro-section">
+                <div class="star">
+                    <svg width="363" height="324" viewBox="0 0 363 324" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_488_4)">
+                            <rect class="line-top" x="72" y="220.543" width="561" height="10.8479" rx="5.42397"
+                                transform="rotate(-23.1491 72 220.543)" fill="#EDEDED" />
+                            <rect class="line-bottom" x="137.17" y="229.543" width="561" height="10.8479" rx="5.42397"
+                                transform="rotate(-23.1491 137.17 229.543)" fill="#EDEDED" />
+                        </g>
+                        <path class="star-path"
+                            d="M43.5 324C42.5705 306.328 38.8525 294.296 31.9743 287.716C25.0961 281.136 14.5 277.564 0 277C14.5 276.436 25.0961 272.864 31.9743 266.284C38.8525 259.704 42.5705 247.672 43.5 230C44.4295 247.672 48.1474 259.704 54.8397 266.284C61.532 272.864 72.1282 276.436 87 277C72.1282 277.564 61.532 281.136 54.8397 287.716C48.1474 294.296 44.4295 306.328 43.5 324Z"
+                            fill="#6DCCDE" />
+                        <defs>
+                            <clipPath id="clip0_488_4">
+                                <rect width="292" height="240" fill="white" transform="translate(72)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="intro-inner">
+                    <!-- 소개 텍스트에도 AOS 적용 가능 -->
+                    <div class="intro-text" data-aos="fade-up" data-aos-duration="1000">
+                        <h2 class="intro-title" data-aos="fade-right" data-aos-duration="1000">OCEAN FLOW</h2>
+                        <h3 class="intro-subtitle">Ocean Flow는 부산의 바다에서<br>시작된 패션의 흐름입니다.</h3>
+                        <p class="intro-desc">물결처럼 이어지는 움직임과 유연한 실루엣을 통해<br>
+                            도시와 사람, 그리고 패션을 하나의 리듬으로 연결합니다.<br><br>
+                            바다의 에너지와 부산의 속도를 담아<br>
+                            패션을 경험하고 기록하는 새로운 패션위크의 방향을 제안합니다.</p>
+                        <button class="btn-our-flow">OUR FLOW</button>
+                    </div>
+                    <div class="intro-visual" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="rotating-text-wrapper">
+                            <svg class="rotating-svg" viewBox="0 0 500 500">
+                                <defs>
+                                    <path id="textCircle"
+                                        d="M250,250 m-220,0 a220,220 0 1,1 440,0 a220,220 0 1,1 -440,0" />
+                                </defs>
+                                <text width="500">
+                                    <textPath xlink:href="#textCircle" startOffset="0%" text-anchor="middle"
+                                        side="right">OCEAN FLOW BUSAN FASHION WEEK &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                                        OCEAN FLOW BUSAN FASHION WEEK &nbsp;&nbsp;&bull;&nbsp;&nbsp; </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                        <div class="circle-image">
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 4. SIDE BUTTON (FIXED) -->
+            <aside class="side-button">
+                <div class="side-item">
+                    <div class="side-icon">
+                        <img src="./images/date.svg" alt="">
+                    </div>
+                    <span class="side-text">일정보기</span>
+                </div>
+                <div class="side-item">
+                    <div class="side-icon">
+                        <img src="./images/ticket.svg" alt="">
+                    </div>
+                    <span class="side-text">TICKET</span>
+                </div>
+                <div class="side-item">
+                    <div class="side-icon">
+                        <img src="./images/connet.svg" alt="">
+                    </div>
+                    <span class="side-text">CONNECT</span>
+                </div>
+            </aside>
+
+            <!-- 5. MARQUEE TEXT (Infinite Scroll) -->
+            <section class="marquee-section">
+                <div class="marquee-track">
+                    <!-- 폰트 변경 및 사이즈 확대 반영 -->
+                    <span class="marquee-text-color">CATCH YOUR FLOW !</span><span class="marquee-text-color">CATCH YOUR
+                        FLOW !</span><span class="marquee-text-color">CATCH YOUR FLOW !</span><span
+                        class="marquee-text-color">CATCH YOUR FLOW !</span><span class="marquee-text-color">CATCH YOUR
+                        FLOW !</span>
+                    <span class="marquee-text-color">CATCH YOUR FLOW !</span><span class="marquee-text-color">CATCH YOUR
+                        FLOW !</span><span class="marquee-text-color">CATCH YOUR FLOW !</span><span
+                        class="marquee-text-color">CATCH YOUR FLOW !</span><span class="marquee-text-color">CATCH YOUR
+                        FLOW !</span>
+                </div>
+            </section>
+
+            <!-- 6. EVENTS SECTION -->
+            <section class="events-section" id="eventsSection">
+                <!-- <div class="events-wave-bg"></div> -->
+                <div class="events-inner">
+                    <h2 class="events-title" data-aos="fade-right">EVENTS</h2>
+                    <div class="posters-container">
+                        <!-- [AOS] fade-left: 오른쪽에서 왼쪽으로 등장 -->
+                        <!-- data-aos-delay: 순차적 등장을 위한 딜레이 -->
+                        <div class="poster-card" data-aos="fade-left" data-aos-delay="0" data-aos-duration="1000">
+                            <div class="poster-img poster-1"><img src="./images/poster1.png" alt="poster1"></div>
+                            <div class="poster-overlay"><button class="btn-view-more">VIEW MORE</button></div>
+                        </div>
+                        <div class="poster-card" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000">
+                            <div class="poster-img poster-2"><img src="./images/poster2.png" alt="poster2"></div>
+                            <div class="poster-overlay"><button class="btn-view-more">VIEW MORE</button></div>
+                        </div>
+                        <div class="poster-card" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
+                            <div class="poster-img poster-3"><img src="./images/poster3.png" alt="poster3"></div>
+                            <div class="poster-overlay"><button class="btn-view-more">VIEW MORE</button></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 7. MERCH SECTION (굿즈) -->
+            <section class="merch-section" id="merchSection">
+                <div class="star2">
+                    <svg class="shooting-star-svg" width="364" height="324" viewBox="0 0 364 324" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_488_7)">
+                            <rect class="line-top" width="561" height="10.8479" rx="5.42397"
+                                transform="matrix(-0.919485 -0.393125 -0.393125 0.919485 292 220.543)" fill="#EDEDED" />
+                            <rect class="line-bottom" width="561" height="10.8479" rx="5.42397"
+                                transform="matrix(-0.919485 -0.393125 -0.393125 0.919485 226.83 229.543)"
+                                fill="#EDEDED" />
+                        </g>
+                        <path class="star-sparkle"
+                            d="M320.5 324C321.429 306.328 325.147 294.296 332.026 287.716C338.904 281.136 349.5 277.564 364 277C349.5 276.436 338.904 272.864 332.026 266.284C325.147 259.704 321.429 247.672 320.5 230C319.571 247.672 315.853 259.704 309.16 266.284C302.468 272.864 291.872 276.436 277 277C291.872 277.564 302.468 281.136 309.16 287.716C315.853 294.296 319.571 306.328 320.5 324Z"
+                            fill="#6DCCDE" />
+                        <defs>
+                            <clipPath id="clip0_488_7">
+                                <rect width="292" height="240" fill="white" transform="matrix(-1 0 0 1 292 0)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                </div>
+                <div class="merch-meteor"></div>
+                <div class="merch-inner">
+                    <!-- [AOS] 목업 이미지는 왼쪽에서 (fade-right) -->
+                    <div class="merch-mockup" data-aos="fade-right" data-aos-duration="1200">
+                        <div>
+                            <img src="./images/mockups.png" alt="mockups">
+                        </div>
+                    </div>
+                    <!-- [AOS] 텍스트는 오른쪽에서 (fade-left) -->
+                    <div class="merch-text-group" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+                        <h2 class="merch-title">TAKE THE RUNWAY HOME !</h2>
+                        <p class="merch-subtitle">스타일을 경험하는 가장 쉬운 방법</p>
+                        <button class="btn-shop">SHOP NOW</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. WAY SECTION (오션플로우 웨이) -->
+            <section class="way-section" id="waySection">
+                <div class="way-inner">
+                    <!-- [AOS] 왼쪽에서 오른쪽으로 (fade-right) -->
+                    <div class="way-content" data-aos="fade-right" data-aos-duration="1000">
+                        <h2 class="way-title">OCEAN FLOW WAY</h2>
+                        <ul class="way-info-list">
+                            <li>
+                                <span class="way-info-label">기간</span>
+                                <span class="way-info-desc">2026.12.18 (금) - 12.27 (일)</span>
+                            </li>
+                            <li>
+                                <span class="way-info-label">장소</span>
+                                <span class="way-info-desc">부산 벡스코 (BEXCO)</span>
+                            </li>
+                            <li>
+                                <span class="way-info-label">주소</span>
+                                <span class="way-info-desc">부산광역시 해운대구 APEC로 55</span>
+                            </li>
+                            <li>
+                                <span class="way-info-label">운영시간</span>
+                                <span class="way-info-desc">매일 11:00 - 19:00</span>
+                            </li>
+                        </ul>
+
+                        <!-- 예매하기 버튼 추가 영역 -->
+                        <div class="way-btn-wrap">
+                            <a href="#" class="way-btn-reserve">예매하기</a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- 9. FLOW LETTER SECTION -->
+            <section class="letter-section" id="letterSection">
+                <div class="star">
+                    <svg width="363" height="324" viewBox="0 0 363 324" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_488_4)">
+                            <rect class="line-top" x="72" y="220.543" width="561" height="10.8479" rx="5.42397"
+                                transform="rotate(-23.1491 72 220.543)" fill="#EDEDED" />
+                            <rect class="line-bottom" x="137.17" y="229.543" width="561" height="10.8479" rx="5.42397"
+                                transform="rotate(-23.1491 137.17 229.543)" fill="#EDEDED" />
+                        </g>
+                        <path class="star-path"
+                            d="M43.5 324C42.5705 306.328 38.8525 294.296 31.9743 287.716C25.0961 281.136 14.5 277.564 0 277C14.5 276.436 25.0961 272.864 31.9743 266.284C38.8525 259.704 42.5705 247.672 43.5 230C44.4295 247.672 48.1474 259.704 54.8397 266.284C61.532 272.864 72.1282 276.436 87 277C72.1282 277.564 61.532 281.136 54.8397 287.716C48.1474 294.296 44.4295 306.328 43.5 324Z"
+                            fill="#6DCCDE" />
+                        <defs>
+                            <clipPath id="clip0_488_4">
+                                <rect width="292" height="240" fill="white" transform="translate(72)" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+
+                <div class="letter-meteor"></div>
+                <div class="letter-wave-bg"></div>
+
+                <div class="letter-inner">
+                    <h2 class="letter-title" data-aos="fade-right">FLOW LETTER</h2>
+
+                    <div class="letter-grid">
+                        <!-- [AOS] 아래에서 위로 순차 등장 (fade-up) -->
+                        <div class="letter-card" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1000">
+                            <div class="letter-img letter-img-1"><img src="./images/letterimg1.png" alt="letterimg1">
+                            </div>
+                            <div class="letter-overlay">
+                                <div class="letter-text-box">
+                                    <p class="letter-desc-main">부산패션위크, [Ocean Flow]</p>
+                                    <p class="letter-desc-sub">2026 F/W 시즌 새로운 흐름과 유행</p>
+                                    <p class="letter-desc-sub" style="margin-top:5px; color:#aaa;">2026.02.16</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="letter-card" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                            <div class="letter-img letter-img-2"><img src="./images/letterimg2.png" alt="letterimg2">
+                            </div>
+                            <div class="letter-overlay">
+                                <div class="letter-text-box">
+                                    <p class="letter-desc-main">해외 바이어 비즈니스 미팅 현장</p>
+                                    <p class="letter-desc-sub">전세계 바이어와 함께한 뜨거운 열기</p>
+                                    <p class="letter-desc-sub" style="margin-top:5px; color:#aaa;">2026.02.18</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="letter-card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+                            <div class="letter-img letter-img-3"><img src="./images/letterimg3.png" alt="letterimg3">
+                            </div>
+                            <div class="letter-overlay">
+                                <div class="letter-text-box">
+                                    <p class="letter-desc-main">[Ocean Flow] 백스테이지 미리보기</p>
+                                    <p class="letter-desc-sub">런웨이 뒤, 모델들의 준비 과정</p>
+                                    <p class="letter-desc-sub" style="margin-top:5px; color:#aaa;">2026.02.20</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="letter-card" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                            <div class="letter-img letter-img-4"><img src="./images/letterimg4.png" alt="letterimg4">
+                            </div>
+                            <div class="letter-overlay">
+                                <div class="letter-text-box">
+                                    <p class="letter-desc-main">참여 부스 이벤트</p>
+                                    <p class="letter-desc-sub">나만의 '스타일 굿즈' 만들기 체험존 운영</p>
+                                    <p class="letter-desc-sub" style="margin-top:5px; color:#aaa;">2026.02.23</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 1. 뉴스레터 영역 -->
+            <div class="newsletter-section">
+                <div class="newsletter-content">
+                    <!-- 제목: PyeongchangPeace 폰트 적용됨 -->
+                    <h2 class="newsletter-title">Don't Miss the Next Flow !</h2>
+                    <p class="newsletter-desc">바다의 흐름처럼 이어지는 패션 소식을 전합니다.</p>
+
+                    <!-- 버튼: 호버 시 #6DCCDE 색상 변경 -->
+                    <a href="#" class="subscribe-btn">구독하기</a>
+                </div>
+            </div>
+
+            <!-- 2. 브랜드 로고 띠 (Ticker) 영역 -->
+            <div class="brand-ticker-wrapper">
+                <!-- 
+               [중요] 무한 스크롤이 끊기지 않게 하려면 로고들을 충분히 복사해서 넣어줘야 합니다.
+               아래 ticker-item들을 복사해서 두 배로 늘려주세요.
+            -->
+                <div class="ticker-track">
+                    <!-- 로고 그룹 1 -->
+                    <div class="ticker-item"><img src="./images/busan_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/biz_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/sumu_logo.png" alt="Logo"></div>
+
+                    <!-- 로고 그룹 2 (자연스러운 연결을 위해 같은 이미지 반복) -->
+                    <div class="ticker-item"><img src="./images/busan_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/biz_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/sumu_logo.png" alt="Logo"></div>
+
+
+                    <!-- 로고 그룹 3 (화면 너비 1920px를 채우기 위해 충분히 반복) -->
+                    <div class="ticker-item"><img src="./images/busan_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/biz_logo.png" alt="Logo"></div>
+                    <div class="ticker-item"><img src="./images/sumu_logo.png" alt="Logo"></div>
+
+                </div>
+            </div>
+
+            <!-- 3. 푸터 영역 -->
+            <footer class="footer">
+                <!-- 왼쪽: 정보 및 링크 -->
+                <div class="footer-left">
+                    <div class="footer-links">
+                        <a href="#">중요정보고시</a>
+                        <a href="#">서비스이용약관</a>
+                        <a href="#">개인정보처리방침</a>
+                        <a href="#">이메일무단수집거부</a>
+                        <a href="#">고객센터</a>
+                    </div>
+
+                    <!-- 오션플로우 텍스트 로고 (이미지 교체 필요) -->
+                    <div class="footer-logo">
+                        <!-- [이미지 변경] 여기에 가지고 계신 오션플로우 로고 파일을 넣으세요 -->
+                        <img src="./images/footer_logo_text.png" alt="Ocean Flow" class="footer-logo-img">
+                    </div>
+
+                    <div class="footer-info">
+                        <div class="info-block">
+                            <span class="info-title">주소</span>
+                            BEXCO, Busan 55 APEC-ro, Haeundae-gu, Busan, Republic of Korea
+                        </div>
+                        <div class="info-block">
+                            <span class="info-title">행사일정</span>
+                            December 18 - December 27, 2026<br>
+                            11:00 AM - 7:00 PM
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 오른쪽: 원형 로고 및 SNS -->
+                <div class="footer-right">
+
+                    <!-- 원형 로고 컨테이너 -->
+                    <div class="circle-logo-container">
+                        <!-- 
+                        1. 둥근 텍스트 (SVG)
+                        - OCEAN FLOW: #6DCCDE
+                        - BUSAN FASHION WEEK: #ffffff
+                        - 폰트: PyeongchangPeace
+                        - 애니메이션: 회전
+                    -->
+                        <svg class="rotating-text-svg" viewBox="0 0 300 300">
+                            <defs>
+                                <!-- 텍스트가 따라갈 원형 경로 정의 -->
+                                <path id="circlePath"
+                                    d="M 150, 150 m -120, 0 a 120,120 0 1,1 240,0 a 120,120 0 1,1 -240,0 " />
+                            </defs>
+                            <text>
+                                <!-- 
+                                startOffset 값을 조절하여 텍스트 위치를 잡습니다.
+                                글자 수에 따라 %를 조금씩 수정해야 할 수 있습니다.
+                            -->
+                                <textPath href="#circlePath" startOffset="0%">
+                                    <tspan class="text-ocean" dx="15">OCEAN FLOW</tspan>
+                                    <tspan class="text-busan" dx="50">BUSAN FASHION WEEK</tspan>
+                                    <tspan class="text-ocean" dx="50">OCEAN FLOW</tspan> <!-- 반복해서 원을 채움 -->
+                                </textPath>
+                            </text>
+                        </svg>
+
+                        <!-- 2. 중앙 고정 로고 (이미지 교체 필요) -->
+                        <!-- [이미지 변경] 원형 안에 들어갈 로고 파일을 넣으세요 -->
+                        <img src="./images/footer_logo_img.png" alt="Center Logo" class="center-logo">
+                    </div>
+
+                    <div class="sns-icons">
+                        <!-- [링크 수정] 아래 href="" 따옴표 안에 인스타그램 주소를 입력하세요 -->
+                        <a href="https://www.instagram.com/" target="_blank" class="sns-icon-btn">
+                            <img src="./images/insta.png" alt="Instagram">
+                        </a>
+
+                        <!-- [링크 수정] 아래 href="" 따옴표 안에 유튜브 채널 주소를 입력하세요 -->
+                        <a href="https://www.youtube.com/?hl=ko&gl=KR&app=desktop" target="_blank" class="sns-icon-btn">
+                            <img src="./images/youtube.png" alt="Youtube">
+                        </a>
+
+                        <!-- [링크 수정] 아래 href="" 따옴표 안에 X(트위터) 주소를 입력하세요 -->
+                        <a href="https://x.com/?lang=ko" target="_blank" class="sns-icon-btn">
+                            <img src="./images/x_sns.png" alt="X">
+                        </a>
+                    </div>
+                </div>
+            </footer>
+
+        </div><!--.wrapper  -->
+
+    </div><!-- #wrap -->
+
+    <!-- AOS JS 라이브러리 로드 -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- AOS 초기화 스크립트 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // AOS 초기화
+            AOS.init({
+                // 한 번만 애니메이션 실행할지 여부 (true: 스크롤 올렸다 내리면 다시 실행 안 함)
+                once: false,
+                // 애니메이션 지속 시간 (ms)
+                duration: 1000,
+                // 오프셋 (트리거 지점)
+                offset: 120,
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1030 @@
+/* --- [1. 공통 리셋 및 폰트 설정] (중복 통합됨) --- */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+}
+
+body {
+    background-color: #1B1B1B;
+    font-family: 'Pretendard', sans-serif;
+    margin: 0 auto;
+    color: #ffffff;
+    overflow-x: hidden;
+    /* 가로 스크롤 방지 추가 */
+}
+
+@font-face {
+    font-family: 'PyeongchangPeace';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
+/* --- [2. 공통 레이아웃 (작성자님 코드 기준 유지)] --- */
+#wrap {
+    min-width: 1360px;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: 'pretandard';
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* --- [3. HEADER 영역 (작성자님 코드)] --- */
+header {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(27, 27, 27, 0.5);
+    position: fixed;
+}
+
+.header-inner {
+    width: 1320px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 50px;
+}
+
+.header-nav a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.header-nav a:hover {
+    color: #6DCCDD;
+}
+
+.header-utils {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-header {
+    padding: 8px 20px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    color: #000000;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-header:hover {
+    color: #6DCCDD;
+    border-color: #6DCCDD;
+}
+
+/* --- [4. MAIN BANNER 영역 (작성자님 코드)] --- */
+.main-banner {
+    width: 100%;
+    height: 600px;
+    margin: 85px auto 0;
+    position: relative;
+}
+
+.main-banner img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.black-wave-top {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: block;
+}
+
+.banner-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 20;
+    color: #ffffff;
+}
+
+.banner-text h2 {
+    font-weight: 300;
+    font-size: 48px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    font-family: 'PyeongchangPeace';
+}
+
+.banner-text .bar {
+    width: 60px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 0 auto 20px;
+}
+
+.banner-text p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* --- 3. 사이드 고정 버튼 --- */
+.side-button {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    background-color: rgba(91, 219, 243, 0.7);
+    padding: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    z-index: 9999;
+    backdrop-filter: blur(5px);
+    border-radius: 50px;
+}
+
+.side-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.side-item:hover {
+    transform: scale(1.1);
+}
+
+.side-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: -20px center;
+    font-size: 10px;
+}
+
+.side-text {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* --- 6. TICKET 섹션 --- */
+.ticket-section {
+    padding: 100px 0;
+}
+
+/* 메인 티켓 이미지 영역 */
+.ticket-main-visual {
+    width: 100%;
+    height: 450px;
+    background-image: url('../images/sub4/tkbanner.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* 이미지 오버레이 (텍스트가 잘 보이도록 어둡게) */
+.ticket-main-visual::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* 그림자가 있는 중앙 텍스트 */
+.ticket-main-text {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+    /* 그림자 효과 */
+}
+
+.ticket-main-text h3 {
+    font-size: 48px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.ticket-main-text p {
+    font-size: 24px;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+
+/* 하단 2개의 티켓 버튼 영역 */
+.ticket-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.ticket-card {
+    width: 450px;
+    height: 160px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    background-color: #444;
+    /* 이미지 없을때 임시 배경 */
+
+    /* ↓ 가지고 계신 바다 배경 이미지를 여기에 각각 넣어주세요! ↓ */
+}
+
+.ticket-card.early {
+    background-image: url('../images/sub4/tkb1.png');
+    background-size: cover;
+}
+
+.ticket-card.general {
+    background-image: url('../images/sub4/tkb2.png');
+    background-size: cover;
+}
+
+.ticket-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(109, 204, 221, 0.3);
+}
+
+/* 티켓 왼쪽 텍스트 정보 */
+.ticket-info {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 100%);
+    /* 글씨 잘보이게 그라데이션 */
+}
+
+.ticket-info h4 {
+    font-size: 24px;
+    font-family: 'PyeongchangPeace';
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.ticket-info p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.ticket-info .date {
+    margin-top: auto;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* 티켓 오른쪽 예매하기 액션 영역 */
+.ticket-action {
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    transition: background 0.3s;
+}
+
+/* 파란/초록 바탕색 */
+.ticket-card.early .ticket-action {
+    background-color: #6DCCDD;
+}
+
+.ticket-card.general .ticket-action {
+    background-color: #8ECEA6;
+}
+
+.ticket-action span {
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.ticket-action-arrow {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+}
+
+.ticket-card:hover .ticket-action-arrow {
+    transform: translateX(5px);
+}
+
+.ticket-card:hover .ticket-action-logo {
+    opacity: 1;
+    /* 호버시 선명하게 */
+}
+
+/* --- 7. 테이프 흐르는 텍스트 (Marquee) --- */
+.marquee-container {
+    width: 100%;
+    background: linear-gradient(90deg, #6DCCDD 0%, #87D399 100%);
+    /* 화려한 그라데이션 배경 */
+    padding: 15px 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 5;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    /* 무한 롤링 애니메이션 적용 */
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    padding: 0 30px;
+    letter-spacing: 2px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* 내용물을 2배로 복제해두고 50%만 이동 */
+}
+
+/* --- 8. MERCH 섹션 --- */
+.merch-section {
+    padding: 120px 0;
+    overflow: hidden;
+}
+
+.merch-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.merch-pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.dot.active {
+    background-color: #fff;
+    transform: scale(1.3);
+}
+
+/* 슬라이더 컨테이너 */
+.merch-slider-wrap {
+    width: 100%;
+    overflow: hidden;
+    /* 영역 밖 숨김 */
+}
+
+.merch-slider {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    gap: 20px;
+}
+
+/* 상품 묶음 (한 화면에 4개씩) */
+.merch-group {
+    min-width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+/* 개별 상품 카드 */
+.merch-card {
+    width: calc(25% - 15px);
+    background-color: transparent;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.merch-card:hover {
+    transform: translateY(-10px);
+}
+
+/* NEW 뱃지 */
+.merch-badge {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #111;
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    z-index: 2;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.merch-card:hover .merch-badge {
+    background-color: #6DCCDD;
+    /* 호버 시 색상 변경 */
+    color: #000;
+}
+
+.merch-img {
+    width: 100%;
+    height: 300px;
+    background-color: transparent;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* ↓ 상품 이미지로 교체 시 아래 속성 활용 ↓ */
+    background-size: cover;
+    background-position: center;
+}
+
+.merch-img img {
+    max-height: 430px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.merch-card:hover .merch-img img {
+    transform: scale(1.1);
+    /* 호버 시 이미지 확대 모션 */
+}
+
+.merch-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.merch-category {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.merch-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.merch-bottom {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid #444;
+    padding-top: 15px;
+}
+
+.merch-price {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* 장바구니 추가 버튼 */
+.btn-add-cart {
+    background: none;
+    border: 1px solid #6DCCDD;
+    color: #6DCCDD;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-add-cart:hover {
+    background-color: #6DCCDD;
+    color: #000;
+}
+
+/* --- 9. 흐르는 문구 (CATCH YOUR FLOW) --- */
+.marquee-section {
+    width: 100%;
+    background-color: transparent;
+    padding: 50px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marquee 40s linear infinite;
+}
+
+.marquee-text {
+    font-family: 'PyeongchangPeace';
+    font-size: 50px;
+    color: #6DCCDD;
+    white-space: nowrap;
+    padding-right: 50px;
+    font-weight: 300;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-section:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* --- 10. SHOW YOUR STYLE 섹션 --- */
+.style-section {
+    padding: 120px 0;
+    text-align: center;
+}
+
+/* 3D 슬라이더 컨테이너 */
+.style-slider-container {
+    position: relative;
+    height: 500px;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    /* 원근감 부여 */
+}
+
+.style-card {
+    position: absolute;
+    width: 300px;
+    height: 450px;
+    background-color: #fff;
+    border-radius: 15px;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    /* 부드러운 전환 */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.style-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 인스타그램 프레임 느낌 (가짜 헤더/푸터) */
+.style-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.style-card::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-size: 16px;
+    padding: 15px;
+    text-align: left;
+}
+
+/* 슬라이드 상태별 CSS 처리 */
+.style-card.active {
+    transform: translateX(0) scale(1.1);
+    z-index: 3;
+    filter: blur(0);
+    opacity: 1;
+    pointer-events: auto;
+    /* 센터만 클릭/호버 활성화 */
+}
+
+.style-card.prev {
+    transform: translateX(-60%) scale(0.8) rotateY(15deg);
+    z-index: 2;
+    filter: blur(4px) brightness(0.6);
+    /* 블러 처리 및 어둡게 */
+    opacity: 1;
+}
+
+.style-card.next {
+    transform: translateX(60%) scale(0.8) rotateY(-15deg);
+    z-index: 2;
+    filter: blur(4px) brightness(0.6);
+    opacity: 1;
+}
+
+/* 슬라이더 좌우 화살표 버튼 */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.slider-arrow:hover {
+    background-color: #fff;
+}
+
+.slider-arrow:hover svg {
+    fill: #000;
+}
+
+.slider-arrow svg {
+    width: 15px;
+    height: 15px;
+    fill: #fff;
+    transition: fill 0.3s;
+}
+
+.arrow-left {
+    left: 50px;
+}
+
+.arrow-right {
+    right: 50px;
+}
+
+/* 스타일 하단 텍스트 및 버튼 */
+.style-text-box h3 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.style-text-box p {
+    font-size: 16px;
+    font-weight: 300;
+    color: #bbb;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.btn-style {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-style:hover {
+    color: #6DCCDD;
+    border-color: #6DCCDD;
+    box-shadow: 0 5px 15px rgba(109, 204, 221, 0.4);
+}
+
+/* --- 11. FOOTER 영역 플레이스홀더 --- */
+.footer-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #555;
+    font-size: 14px;
+    border-top: 1px solid #222;
+}
+
+/* =========================================
+           2. 브랜드 로고 띠 (Ticker) 섹션
+           ========================================= */
+.brand-ticker-wrapper {
+    width: 100%;
+    background-color: #fff;
+    /* 로고 배경색 (흰색) */
+    padding: 10px 0;
+    overflow: hidden;
+    /* 넘치는 부분 숨김 */
+    display: flex;
+}
+
+/* 애니메이션 트랙 */
+.ticker-track {
+    display: flex;
+    align-items: center;
+    /* 무한 롤링 애니메이션 정의 */
+    animation: scroll-left 20s linear infinite;
+}
+
+/* 개별 로고 이미지 스타일 */
+.ticker-item {
+    /* [로고 이미지 크기 조절] */
+    height: 40px;
+    margin: 0 40px;
+    /* 로고 사이 간격 */
+    flex-shrink: 0;
+}
+
+.ticker-item img {
+    height: 100%;
+    width: auto;
+    display: block;
+}
+
+/* 띠가 왼쪽으로 흐르는 키프레임 */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* 트랙 길이의 절반만큼 이동 후 리셋 */
+}
+
+/* =========================================
+           3. 푸터 섹션 (배경 #111111)
+           ========================================= */
+.footer {
+    background-color: #111111;
+    color: #fff;
+    padding: 60px 100px;
+    /* 내부 여백 */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 350px;
+    /* 넉넉한 높이 */
+}
+
+/* --- 푸터 왼쪽 --- */
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 60%;
+}
+
+.footer-links {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* 오션플로우 로고 (왼쪽) */
+.footer-logo-img {
+    /* [이미지 변경] 오션플로우 로고 파일 */
+    width: 300px;
+    /* 적절히 조절 */
+    display: block;
+}
+
+.footer-info {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #eee;
+}
+
+.info-block {
+    margin-bottom: 20px;
+}
+
+.info-title {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+/* --- 푸터 오른쪽 --- */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    /* 오른쪽 정렬 */
+    gap: 30px;
+    position: relative;
+}
+
+/* [원형 텍스트 + 로고 컨테이너] */
+.circle-logo-container {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 중앙 로고 이미지 (회전 안함) */
+.center-logo {
+    position: absolute;
+    width: 100px;
+    /* 중앙 로고 크기 */
+    height: auto;
+    z-index: 2;
+}
+
+/* 회전하는 텍스트 SVG */
+.rotating-text-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: rotate-circle 15s linear infinite;
+    /* 회전 애니메이션 */
+}
+
+/* 텍스트 패스 폰트 설정 */
+.rotating-text-svg text {
+    font-family: 'PyeongchangPeace';
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+/* 텍스트 색상 클래스 */
+.text-ocean {
+    fill: #6DCCDD;
+}
+
+.text-busan {
+    fill: #ffffff;
+}
+
+@keyframes rotate-circle {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* SNS 아이콘 영역 */
+.sns-icons {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sns-icon-btn {
+    width: 40px;
+    height: 40px;
+    display: block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sns-icon-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.sns-icon-btn:hover {
+    color: #6DCCDD;
+
+}
