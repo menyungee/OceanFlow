@@ -194,18 +194,15 @@ header {
 .black-wave-top {
     width: 100%;
     position: absolute;
-    bottom: 0px;
+    bottom: -5px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
 }
 
-.black-wave-top img {
-    display: block;
-    width: 100%;
-    pointer-events: none;
+.st0 {
+    fill: #1b1b1b;
 }
-
 
 /* --- 3. 소개 섹션 (Intro Section) --- */
 .intro-section {
