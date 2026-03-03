@@ -182,27 +182,30 @@ header {
     height: 890px;
     margin: 85px auto 0;
     position: relative;
-
 }
 
-.main-banner img {
+.main-banner>img {
     width: 100%;
     height: 100%;
     display: block;
 }
 
 .black-wave-top {
-    width: 100%;
+    width: 100vw;
     position: absolute;
-    bottom: -5px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 10;
 }
 
-.st0 {
-    fill: #1b1b1b;
+.black-wave-top img {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+    object-fit: cover;
 }
+
 
 /* --- 3. 소개 섹션 (Intro Section) --- */
 .intro-section {
@@ -1084,7 +1087,7 @@ svg {
 }
 
 
-/* 1. 뉴스레터 섹션 (높이 245px)*/
+/* 10. 뉴스레터 섹션 (높이 245px)*/
 .newsletter-section {
     width: 100%;
     height: 200px;
@@ -1152,9 +1155,7 @@ svg {
     color: #6DCCDD;
 }
 
-/* =========================================
-           2. 브랜드 로고 띠 (Ticker) 섹션
-           ========================================= */
+/* 11.브랜드 로고 띠 (Ticker) 섹션 */
 .brand-ticker-wrapper {
     width: 100%;
     background-color: #fff;
@@ -1201,9 +1202,7 @@ svg {
     /* 트랙 길이의 절반만큼 이동 후 리셋 */
 }
 
-/* =========================================
-           3. 푸터 섹션 (배경 #111111)
-           ========================================= */
+/* 12. footer */
 .footer {
     background-color: #111111;
     color: #fff;

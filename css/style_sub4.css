@@ -151,7 +151,7 @@ header {
 }
 
 .black-wave-top {
-    width: 100%;
+    width: 100vw;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -190,7 +190,7 @@ header {
     font-weight: 400;
 }
 
-/* --- 3. 사이드 고정 버튼 --- */
+/* --- 5. 사이드 고정 버튼 --- */
 .side-button {
     position: fixed;
     right: 30px;
@@ -426,7 +426,7 @@ header {
 
 .marquee-content span {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 300;
     color: #fff;
     padding: 0 30px;
     letter-spacing: 2px;
@@ -610,45 +610,48 @@ header {
     color: #000;
 }
 
-/* --- 9. 흐르는 문구 (CATCH YOUR FLOW) --- */
-.marquee-section {
-    width: 100%;
-    background-color: transparent;
-    padding: 50px 0;
-    overflow: hidden;
-    position: relative;
-}
+        /* --- 9. 흐르는 문구 (CATCH YOUR FLOW) --- */
+        .marquee-section {
+            width: 100%;
+            background-color: transparent;
+            padding: 50px 0;
+            overflow: hidden;
+            position: relative;
+        }
 
-.marquee-content {
-    display: flex;
-    width: max-content;
-    animation: marquee 40s linear infinite;
-}
+        /* [수정 1] HTML에 맞게 .marquee-content 를 .marquee-track 으로 변경했습니다. */
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 40s linear infinite;
+        }
 
-.marquee-text {
-    font-family: 'PyeongchangPeace';
-    font-size: 50px;
-    color: #6DCCDD;
-    white-space: nowrap;
-    padding-right: 50px;
-    font-weight: 300;
-}
+        /* [수정 2] HTML에 맞게 .marquee-text 를 .marquee-text-color 로 변경했습니다. */
+        .marquee-text-color {
+            font-family: 'PyeongchangPeace';
+            font-size: 50px;
+            color: #6DCCDD; /* 여기서 컬러, 사이즈 수정하시면 잘 적용됩니다! */
+            white-space: nowrap;
+            padding-right: 50px;
+            font-weight: 300;
+        }
 
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
 
-    100% {
-        transform: translateX(-50%);
-    }
-}
+            100% {
+                transform: translateX(-50%);
+            }
+        }
 
-.marquee-section:hover .marquee-content {
-    animation-play-state: paused;
-}
+        /* [수정 3] 호버 이벤트 타겟도 .marquee-track 으로 맞춰주었습니다. */
+        .marquee-section:hover .marquee-track {
+            animation-play-state: paused;
+        }
 
-/* --- 10. SHOW YOUR STYLE 섹션 --- */
+/* --- 9. SHOW YOUR STYLE 섹션 --- */
 .style-section {
     padding: 120px 0;
     text-align: center;
@@ -809,25 +812,9 @@ header {
 .btn-style:hover {
     color: #6DCCDD;
     border-color: #6DCCDD;
-    box-shadow: 0 5px 15px rgba(109, 204, 221, 0.4);
 }
 
-/* --- 11. FOOTER 영역 플레이스홀더 --- */
-.footer-placeholder {
-    width: 100%;
-    height: 200px;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #555;
-    font-size: 14px;
-    border-top: 1px solid #222;
-}
-
-/* =========================================
-           2. 브랜드 로고 띠 (Ticker) 섹션
-           ========================================= */
+/* 10. 브랜드 로고 띠 (Ticker) 섹션 */
 .brand-ticker-wrapper {
     width: 100%;
     background-color: #fff;
@@ -874,9 +861,7 @@ header {
     /* 트랙 길이의 절반만큼 이동 후 리셋 */
 }
 
-/* =========================================
-           3. 푸터 섹션 (배경 #111111)
-           ========================================= */
+/* 11. 푸터 섹션 */
 .footer {
     background-color: #111111;
     color: #fff;

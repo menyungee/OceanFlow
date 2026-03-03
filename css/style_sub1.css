@@ -155,7 +155,7 @@ header {
 }
 
 .black-wave-top {
-    width: 100%;
+    width: 100vw;
     position: absolute;
     bottom: 45px;
     left: 50%;
@@ -254,9 +254,7 @@ header {
     text-align: center;
 }
 
-/* =========================================
-           4. INTRO SECTION (대칭형 아치)
-           ========================================= */
+/* 4. INTRO SECTION (대칭형 아치)*/
 .intro-section {
     position: relative;
     padding-top: 100px;
@@ -300,7 +298,7 @@ header {
     height: auto;
 }
 
-/* 💡 수정된 부분: 기준점을 확실하게 중앙(left: 50%)으로 잡았습니다. */
+
 .droplet {
     position: absolute;
     border-radius: 50%;
@@ -444,9 +442,7 @@ header {
     animation-play-state: paused;
 }
 
-/* ==================== 
-           [섹션 1] 로고 파트 
-           ==================== */
+/* 6. 로고 파트  */
 .logo-section {
     padding: 100px 0;
 }
@@ -478,9 +474,7 @@ header {
     margin-bottom: 20px;
 }
 
-/* ==================== 
-           [섹션 2] 배너 파트 
-           ==================== */
+/* 7. 배너 파트  */
 .banner-section {
     /* 지정해주신 색상: 위 #6DCCDD, 아래 #3B6E77 */
     background: linear-gradient(to bottom, #6DCCDD, #3B6E77);
@@ -567,9 +561,7 @@ header {
     color: #3B6E77;
 }
 
-/* ==================== 
-           [섹션 3] 브랜드 밸류 
-           ==================== */
+/* 8. 브랜드 밸류 */
 .values-section {
     padding: 120px 0 60px 0;
 }
@@ -654,9 +646,7 @@ header {
     padding: 0 20px;
 }
 
-/* ==================== 
-           [섹션 4] 아워 히스토리 (OUR HISTORY) 
-           ==================== */
+/* 9. 아워 히스토리 (OUR HISTORY) */
 .history-section {
     padding: 60px 0 120px 0;
     overflow: hidden;
@@ -836,9 +826,7 @@ header {
     /* 호버 시 연도 텍스트 밝게 전환 */
 }
 
-/* =========================================
-           2. 브랜드 로고 띠 (Ticker) 섹션
-           ========================================= */
+/* 10. 브랜드 로고 띠 (Ticker) 섹션 */
 .brand-ticker-wrapper {
     width: 100%;
     background-color: #fff;
@@ -885,9 +873,7 @@ header {
     /* 트랙 길이의 절반만큼 이동 후 리셋 */
 }
 
-/* =========================================
-           3. 푸터 섹션 (배경 #111111)
-           ========================================= */
+/* 11. 푸터 섹션 (배경 #111111)*/
 .footer {
     background-color: #111111;
     color: #fff;
