@@ -329,7 +329,6 @@
         .conf-poster {
             width: 30%;
             aspect-ratio: 3 / 4;
-            background-color: #2a2a2a;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
