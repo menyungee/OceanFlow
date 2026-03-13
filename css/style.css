@@ -183,7 +183,7 @@ header {
     position: relative;
 }
 
-.main-banner video{
+.main-banner video {
     margin: 0 auto;
 }
 
@@ -630,10 +630,11 @@ svg {
 /* --- 7. 굿즈 섹션 (Merch) --- */
 .merch-section {
     width: 100%;
-    padding: 150px 0;
-    height: 400px;
+    padding: 100px 0px;
+    height: 300px;
     position: relative;
 }
+
 
 .star2 {
     position: absolute;
@@ -764,7 +765,7 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 200px;
+    gap: 100px;
     z-index: 9;
 }
 
@@ -779,6 +780,10 @@ svg {
 
 .merch-mockup img {
     display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
 }
 
 .merch-text-group {

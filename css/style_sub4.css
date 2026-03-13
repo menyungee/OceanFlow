@@ -550,7 +550,6 @@ header {
 }
 
 .merch-img img {
-    max-height: 430px;
     object-fit: cover;
     transition: transform 0.5s;
 }
@@ -599,7 +598,7 @@ header {
     border: 1px solid #6DCCDD;
     color: #6DCCDD;
     padding: 6px 12px;
-    border-radius: 20px;
+    border-radius: 0px;
     font-size: 12px;
     cursor: pointer;
     transition: all 0.3s;
