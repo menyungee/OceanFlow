@@ -920,9 +920,8 @@ svg {
 
 /* 버튼에 마우스 올렸을 때의 효과 */
 .way-btn-reserve:hover {
-    color: #6DCCDD;
-    background-color: #fff;
-    border-color: #6DCCDD;
+    color: #1cddff;
+    border-color: #1cddff;
 }
 
 
