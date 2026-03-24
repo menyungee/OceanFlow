@@ -689,7 +689,7 @@ header {
     object-fit: cover;
 }
 
-/* 인스타그램 프레임 느낌 (가짜 헤더/푸터) */
+/* 인스타그램 프레임 느낌 */
 .style-card::before {
     position: absolute;
     top: 0;
@@ -784,7 +784,7 @@ header {
 /* 스타일 하단 텍스트 및 버튼 */
 .style-text-box h3 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 300;
     margin-bottom: 15px;
 }
 
@@ -803,7 +803,7 @@ header {
     border: 1px solid #fff;
     color: #fff;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 300;
     transition: all 0.3s;
     cursor: pointer;
 }
